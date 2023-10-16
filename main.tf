@@ -34,7 +34,7 @@ resource "aws_instance" "k8s_master" {
 #launch worker node
 resource "aws_instance" "k8s_worker" {
   count = var.worker_count
-  ami = var.ami[worker]  
+  ami = var.ami["worker"]  
   instance_type = "t2.micro"
   tags = {
     Name = "k8s_worker-${count.index}"
