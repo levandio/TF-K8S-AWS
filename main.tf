@@ -1,6 +1,6 @@
 #launch master node
 resource "aws_instance" "k8s_master" {
-  ami = var.ami["master"]  
+  ami = var.ami["master"] 
   instance_type = "t2.micro"
   tags = {
     Name = "k8s_master"
