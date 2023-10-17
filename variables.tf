@@ -7,8 +7,8 @@ variable "ami" {
   description = "AMI ID for Amazon Linux"
   type        = map(string)
   default     = {
-    master = "ami-024e6efaf93d85776"
-    worker = "ami-024e6efaf93d85776"
+    master = "ami-080c09858e04800a1"
+    worker = "ami-080c09858e04800a1"
   }
 }
 
