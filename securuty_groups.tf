@@ -38,7 +38,7 @@ ingress {
 ingress {
     description      = "weavenet UDP"
     from_port        = 6784
-    to_port          = 6443
+    to_port          = 6784
     protocol         = "udp"
     cidr_blocks      = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]
@@ -73,7 +73,7 @@ egress {
   }
 }
 
-#for woeker node
+#for worker node
 resource "aws_security_group" "k8s_worker" {
   name        = "k8s_worker_sg"
   description = "k8s_worker_sg security group"
@@ -97,7 +97,7 @@ ingress {
 ingress {
     description      = "weavenet UDP"
     from_port        = 6784
-    to_port          = 6443
+    to_port          = 6784
     protocol         = "udp"
     cidr_blocks      = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]
