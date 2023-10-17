@@ -3,7 +3,7 @@ variable "aws_region" {
   default     = "us-east-2"
 }
 
-variable "amazon_linux_ami" {
+variable "ami" {
   description = "AMI ID for Amazon Linux"
   type        = map(string)
   default     = {
