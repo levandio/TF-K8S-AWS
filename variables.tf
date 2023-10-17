@@ -1,6 +1,5 @@
-variable "aws_region" {
-  description = "AWS region to launch instances in"
-  default     = "us-east-2"
+variable "region" {
+  default = "us-east-1"
 }
 
 variable "ami" {
