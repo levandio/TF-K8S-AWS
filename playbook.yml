@@ -1,9 +1,9 @@
-hosts: all
-name: fetch join token file
-gather_facts: false
-tasks:
-- name: fetch join token file
-  ansible.builtin.fetch:
-    src: /home/ubuntu/join_command.sh
-    dest: ./join_command.sh
-    flat: yes
+- name: Fetch join token file
+  hosts: all
+  gather_facts: no
+  tasks:
+  - name: Fetch join token file
+    ansible.builtin.fetch:
+      src: /home/ubuntu/join_command.sh
+      dest: ./join_command.sh
+      flat: yes
